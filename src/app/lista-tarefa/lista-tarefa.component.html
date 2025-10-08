@@ -1,0 +1,30 @@
+<div class="row">   
+    <div class="col-md-12">
+            <h2>Lista de Tarefas</h2>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Descrição</th>
+                        <th>Status</th>
+                        <th>Concluir</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (tarefa of tarefas; track $index) {
+                        <tr>
+                            <td [ngStyle]="{ 'text-decoration': tarefa.concluida ? 'line-through' : 'none' }">{{ tarefa.descricao }}</td>
+                            <td>{{ tarefa.concluida ? 'Sim' : 'Não' }}</td>
+                            <td>
+                                <button class="btn btn-success" (click)="tarefaConcluida(tarefa)">Concluir</button>
+                                <button class="btn btn-danger" (click)="removerTarefa($index)">Remover</button>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-12">
+            <button class="btn btn-primary" (click)="adicionarTarefa()">Adicionar Tarefa</button>
+            <input type="text" [(ngModel)]="novaTarefa" placeholder="Nova Tarefa" class="form-control">
+        </div>
+</div>

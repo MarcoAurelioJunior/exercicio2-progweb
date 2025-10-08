@@ -1,0 +1,15 @@
+<label for="ac1">AC1:</label>
+<input type="number" id="ac1" [(ngModel)]="ac1" class="form-control" />
+<label for="ac2">AC2:</label>
+<input type="number" id="ac2" [(ngModel)]="ac2" class="form-control" />
+<label for="ag">AG:</label>
+<input type="number" id="ag" [(ngModel)]="ag" class="form-control" />
+<label for="af">AF:</label>
+<input type="number" id="af" [(ngModel)]="af" class="form-control" />
+<button (click)="calcularMedia()" class="btn btn-primary mt-3">Calcular Média</button>
+<p>
+    Média: {{media}}
+</p>
+<p>
+    Situação: {{situacao}}
+</p>

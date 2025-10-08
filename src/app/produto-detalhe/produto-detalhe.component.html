@@ -1,0 +1,25 @@
+<div>
+  <h2>Detalhes do Produto</h2>
+  <p>ID: {{ id }}</p>
+</div>
+
+<div class="col-sm-4">
+  @if (produto) {
+    <div class="card">
+      <img src="images/semfoto.png" class="card-img-top" alt="{{ produto.descricao }}">
+      <div class="card-body">
+        <h5 class="card-title">
+          Produto {{ produto.id }}
+        </h5>
+        <p class="card-text">
+          Descrição: {{ produto.descricao }}
+        </p>
+        <p class="card-text">
+          Preço: R$ {{ produto.preco }}
+        </p>
+      </div>
+    </div>
+  } @else {
+    <p>Produto não encontrado.</p>
+  }
+</div>

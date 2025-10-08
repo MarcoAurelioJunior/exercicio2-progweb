@@ -1,0 +1,29 @@
+<div>
+    <div class="row justify-content-center">
+        <div class="col-md-12 text-center">
+            <div class="error-404">
+                <h1 class="display-1 text-primary error-number">404</h1>
+                <h2 class="error-title">Oops! Página não encontrada</h2>
+                <p class="error-description lead">
+                    A página que você está procurando não existe ou foi movida para outro local.
+                </p>
+                <div class="error-icon">
+                    <i class="bi bi-exclamation-triangle-fill text-warning"></i>
+                </div>
+                <div class="error-actions mt-4">
+                    <button class="btn btn-primary btn-lg me-3" (click)="voltarHome()">
+                        <i class="bi bi-house-door-fill"></i> Voltar ao Início
+                    </button>
+                    <button class="btn btn-outline-secondary btn-lg" (click)="voltarAnterior()">
+                        <i class="bi bi-arrow-left"></i> Página Anterior
+                    </button>
+                </div>
+                <div class="mt-5">
+                    <p class="text-muted">
+                        Se você acredita que isso é um erro, entre em contato conosco.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
